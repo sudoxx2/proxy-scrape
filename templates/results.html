@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>results</title>
+    </head>
+    <body>
+
+        <!-- app title, version, change logs. and release date parameters from app.py -->
+        <h3>App title: {{ title }}</h3>
+        <p>App version: {{ version }}</p>
+
+        <p>Change logs: <br>
+        {% for row in change_log %}
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ row }}</td>
+              <br>
+            </tr>
+        {% endfor %}
+        </p>
+        
+        <p>{{ release_date }}</p>
+
+    </body>
+</html>
