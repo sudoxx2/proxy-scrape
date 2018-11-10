@@ -39,10 +39,12 @@ def get_proxy():
             my_ip = urlopen(req).read().decode('utf8')
             my_ip.strip()
             my_ip = my_ip + ":" + proxy['port']
+            my_ip = my_ip.replace('\n', '')
             ip_dict = { "http": my_ip }
             return ip_dict
         except:
             # if error, delete this proxy and find another one
+            # print(proxy['ip'] + proxy['port'])
             del proxies[proxy_index]
             proxy_index = random_proxy()
             proxy = proxies[proxy_index]

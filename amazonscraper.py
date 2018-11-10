@@ -10,13 +10,16 @@ class AmazonScraper:
 
     def __init__(self, site_url):
 
-        # get proxy from proxies module
-        proxies = get_proxy()
-
         # instantiating soup object from BeautifulSoup module
         self.site_url = site_url
-        self.source = requests.get(self.site_url, proxies=proxies).text
+        self.source = requests.get(self.site_url).text
         self.soup = BeautifulSoup(self.source, 'lxml')
+
+        # check if soup object is captcha site, if yes grab another soup object
+        while self.soup.title.text == "Robot Check":
+            proxies = get_proxy()
+            self.source = requests.get(self.site_url, proxies=proxies).text
+            self.soup = BeautifulSoup(self.source, 'lxml')
 
         # instantiating class member variables
         self.app_title = ''
