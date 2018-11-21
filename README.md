@@ -18,7 +18,10 @@ Follow instructions below after opening a shell CLI.
 If there are any questions to help get started please post them!
 
 ### Installing
-
+clone the repo 
+```
+git clone https://github.com/Luv2C0de/proxy-scrape.git
+```
 
 Install pip
 
@@ -31,7 +34,7 @@ Install virtualenv
 pip install virtualenv
 ```
 
-Next step is to activate virtualenv
+Next step is to activate virtualenv and navigate to cloned repo directory
 
 ```
 source env/bin/activate
@@ -42,6 +45,20 @@ Install packages from requirements.txt
 ```
 pip install -r /path/to/requirements.txt
 ```
+
+### Running App
+1. Open terminal and navigate to cloned repo
+2. Activate the source if not activated yet
+```
+source env/bin/activate
+```
+3. Run the python file 'app.py'
+```
+python app.py
+```
+4. Navigate to localhost in browser where app is being ran and input a android amazon url
+5. Hit search and see results on next page
+
 
 ## Contributing
 
