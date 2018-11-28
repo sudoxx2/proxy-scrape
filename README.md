@@ -1,6 +1,6 @@
 # proxy-scrape
 
-Scrape Amazon Android app websites using rotating proxies. A user would input a Amazon Android app url link and a page will be rendered with app title, version, change logs, and original release date.
+Scrape Amazon Android app websites using random user agents. A user would input a Amazon Android app url link and a page will be rendered with app title, version, change logs, and original release date.
 
 ## Getting Started
 
