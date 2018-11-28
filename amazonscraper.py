@@ -1,25 +1,23 @@
-""" controllers can utilize this class to gather amazon android app data for client """
+""" Controllers can utilize this class to gather amazon android app data for client
+Currently this app can retrieve app title, version, change log, and release date. """
 
+from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from proxies import *
 import requests
 
 
 class AmazonScraper:
-    """ a class to scrape Amazon Android App websites """
+    """ Class to scrape Amazon Android App websites """
 
     def __init__(self, site_url):
 
         # instantiating soup object from BeautifulSoup module
-        self.site_url = site_url
-        self.source = requests.get(self.site_url).text
+        self.site_url = Request(site_url)
+        # bypassing captcha with random user agent
+        self.site_url.add_header('User-Agent', ua.random)
+        self.source = urlopen(self.site_url).read().decode('utf8')
         self.soup = BeautifulSoup(self.source, 'lxml')
-
-        # check if soup object is captcha site, if yes grab another soup object
-        while self.soup.title.text == "Robot Check":
-            proxies = get_proxy()
-            self.source = requests.get(self.site_url, proxies=proxies).text
-            self.soup = BeautifulSoup(self.source, 'lxml')
 
         # instantiating class member variables
         self.app_title = ''
