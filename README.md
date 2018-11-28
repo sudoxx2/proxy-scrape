@@ -4,49 +4,63 @@ Scrape Amazon Android app websites using rotating proxies. A user would input a 
 
 ## Getting Started
 
-Clone the repo, setup virtual env, install requirements.txt, run flask server
+1. Make sure you have Python2 or Python3 installed
+2. Clone the repo
+3. Setup virtual environment
+4. Install dependencies from requirements.txt
+5. Run flask server
+
+Using virtual environmnet is optional(although I still need to test this on a clean mac environment)
 
 ### Prerequisites
 
-Anyone using this repo should know basic virtual env, flask commands, and basic knowledge of python.
 
 Were going to need to install pip, virtualenv, and the packages listed in the requirements.txt file. 
 
 Currently only have Mac terminal commands. I think it works with Git shell as well for Windows users.
-Follow instructions below after opening a shell CLI.
 
 If there are any questions to help get started please post them!
 
 ### Installing
-clone the repo 
+
+1. Open the terminal
+
+2. Clone the repo 
 ```
 git clone https://github.com/Luv2C0de/proxy-scrape.git
 ```
 
-Install pip
+3. Install pip
 
 ```
 sudo easy_install pip
 ```
-Install virtualenv
+4. Install virtualenv
 
 ```
-pip install virtualenv
+sudo -H pip install virtualenv
+```
+5. Navigate to the cloned repo directory
+6. Create a virtualenv
+
+```
+virtualenv env
 ```
 
-Next step is to activate virtualenv and navigate to cloned repo directory
+7. Activate virtualenv
 
 ```
 source env/bin/activate
 ```
 
-Install packages from requirements.txt
+8. Install packages from requirements.txt
 
 ```
-pip install -r /path/to/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Running App
+
 1. Open terminal and navigate to cloned repo
 2. Activate the source if not activated yet
 ```
@@ -62,7 +76,8 @@ python app.py
 
 ## Contributing
 
-N/A
+Friend at work - Giving awesome feedback for readme and code quality :)
+Not sure if he wants to be named
 
 ## Authors
 
