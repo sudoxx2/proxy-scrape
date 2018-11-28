@@ -10,7 +10,7 @@ Scrape Amazon Android app websites using random user agents. A user would input 
 4. Install dependencies from requirements.txt
 5. Run flask server
 
-Using virtual environmnet is optional(although I still need to test this on a clean mac environment)
+Using virtual environment is optional(although I still need to test this on a clean mac environment)
 
 ### Prerequisites
 
