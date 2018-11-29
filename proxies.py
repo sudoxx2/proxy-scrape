@@ -1,6 +1,6 @@
 """ this script will scrape and generate proxies from sslproxies.org """
 
-from urllib.request import Request, urlopen
+from urllib2 import Request, urlopen
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import random

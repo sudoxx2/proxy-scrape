@@ -1,7 +1,7 @@
 """ Controllers can utilize this class to gather amazon android app data for client
 Currently this app can retrieve app title, version, change log, and release date. """
 
-from urllib.request import Request, urlopen
+from urllib2 import Request, urlopen
 from bs4 import BeautifulSoup
 from proxies import *
 import requests
