@@ -70,7 +70,7 @@ source env/bin/activate
 ```
 python app.py
 ```
-4. Navigate to localhost in browser where app is being ran and input a android amazon url
+4. Navigate to localhost in browser where app is being ran and input a android amazon url(https://www.amazon.com/Facebook/dp/B0094BB4TW use this url to test)
 5. Hit search and see results on next page
 
 
